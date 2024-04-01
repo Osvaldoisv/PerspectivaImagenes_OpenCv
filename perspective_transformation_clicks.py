@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 
+# Esto es para imagenes, pero tambien se puede usar para videos
+
 def clics (event, x, y, flags, param):
     global puntos
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -15,7 +17,7 @@ def uniendo4puntos(puntos):
     
 
 puntos = []
-imagen = cv2.imread('gato.jpeg')
+imagen = cv2.imread('perro.jpeg')
 aux = imagen.copy()
 cv2.namedWindow('Imagen')
 cv2.setMouseCallback('Imagen', clics)
